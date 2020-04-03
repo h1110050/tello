@@ -2,13 +2,18 @@ from TelloSDKPy.djitellopy import Tello
 import cv2
 import time
 
-tello = Tello()
 
-tello.connect()
-tello.takeoff()
+def main():
+    tello = Tello()
 
-tello.move_left(100)
-tello.rotate_counter_clockwise(45)
+    tello.connect()
+    tello.takeoff()
 
-tello.land()
-tello.end()
+    tello.move_left(100)
+    tello.rotate_counter_clockwise(45)
+
+    tello.land()
+    tello.end()
+
+if __name__ == "__main__":
+    main()
